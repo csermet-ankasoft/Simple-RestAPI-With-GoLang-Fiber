@@ -7,15 +7,16 @@ import (
 )
 
 func main() {
-	log.Printf("Service Started")
+	log.Printf("Created By CNR")
+	log.Printf("Fiber Service Started")
 	app := fiber.New()
 
 	//routes
 	routes.VMRoute(app) //add this
 
-	err := app.Listen(":4000")
+	err := app.Listen(":200")
 	if err != nil {
-		log.Printf("Cannot listen port 4000. Error: %v", err.Error())
+		log.Printf("Cannot listen port 200. Error: %v", err.Error())
 		return
 	}
 

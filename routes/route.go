@@ -7,6 +7,7 @@ import (
 )
 
 func VMRoute(app *fiber.App) {
-	app.Get("/api", controller.Getapi)
-	app.Post("/api", controller.Postapi)
+	app.Get("/", controller.Root)
+	app.Get("/external", controller.Getapi)
+	app.Post("/internal", controller.Postapi)
 }
